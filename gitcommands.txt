@@ -79,3 +79,5 @@ Q: How to change the most recent commit message?
 - git amend .......
 
 Q: How to change the commit message other than most recent?
+
+- git rebase -i HEAD~3
