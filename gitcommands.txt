@@ -29,7 +29,7 @@ Use Commands of Git 2k24:
 
 - git pull origin branch_name
 
-- git fetch
+- git fetch (Just get meta data not transfer files)
 
 - git status
 
@@ -65,7 +65,7 @@ Checkout to existing branch and RUN Command
 
 ----------------------------------------------------------------
 
-REBASE (Re-Write Your commit history)
+## REBASE (Re-Write Your commit history)
 
 - you can change commit message
 - you can delete commit message
@@ -83,6 +83,8 @@ Q: How to change the commit message other than most recent?
 Below is example commit 3 will be modified.
 - git rebase -i HEAD~3
 
+------------------------------------------------------------------
+
 Q: How stashing work?
 
 Basically stashing is come to handy, when you have changes in 
@@ -94,3 +96,32 @@ It will keep changes in stash and Apply to working directory
 
 > - git stash Pop
 Will pop from stash and Apply to working directory
+
+--------------------------------------------------------------------------------
+
+## Cherry Pick Command
+
+Q: What will you do, if you committed on wrong branch?
+
+- git log --oneline
+
+- Copy the hash id of commit from for example main branch and then do below.
+
+- git checkout feature/newsletter
+
+- git cherry-pick commitID
+
+-----------------------------------------------------------------------------------
+##### Reflog
+
+If we deleted a useful commit then Reflog is saviour
+
+- git reflog 
+
+Opens up the new editor copy the hash of deleted commit
+
+- git checkout -b new_branch commitID
+
+There we go, Now we have got the deleted commit back. 😊
+
+-----------------------------------------------------------------------------------
