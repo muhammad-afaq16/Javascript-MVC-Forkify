@@ -31,6 +31,8 @@ Use Commands of Git 2k24:
 
 - git fetch
 
+- git restore --staged path or filename
+
 
 ----------------------------------------------------------------
 
