@@ -82,3 +82,15 @@ Q: How to change the commit message other than most recent?
 
 Below is example commit 3 will be modified.
 - git rebase -i HEAD~3
+
+Q: How stashing work?
+
+Basically stashing is come to handy, when you have changes in 
+B branch and you suddenly Remember you are at the wrong branch.
+YOU NEED your CURRENT changes in A branch instead of B.
+
+> - git stash Apply
+It will keep changes in stash and Apply to working directory
+
+> - git stash Pop
+Will pop from stash and Apply to working directory
