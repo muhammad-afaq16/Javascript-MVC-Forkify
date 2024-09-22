@@ -17,7 +17,7 @@ dist/
 npm-debug.log*
 
 # Ignore Parcel's lockfile
-.parcel-cache
+.parcel-cache 
 
 # Ignore macOS system files
 .DS_Store

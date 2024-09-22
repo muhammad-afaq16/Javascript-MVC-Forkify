@@ -1,0 +1,75 @@
+
+Use Commands of Git 2k24:
+
+----------------------------------------------------------------
+
+- git config user.name
+
+- git config user.email
+
+- git commit -m ""
+
+- git add .
+
+- git diff
+
+- git checkout -b branch_name
+
+- git checkout branch_name 
+
+- git branch branch_name
+
+- git branch
+
+- git -M main
+
+- git push origin master
+
+- git remote -v
+
+- git pull origin branch_name
+
+- git fetch
+
+
+----------------------------------------------------------------
+
+Q: How to go to the previous commit / discard new changes?
+
+- git reset --hard HEAD
+
+--------------------------------------------------------------
+
+Q: Let's say you have now already committed ?
+
+RUN and Copy ID: 
+- git log
+
+- git reset --hard commitID
+
+This approach is bit risky, creating a new branch and add new features there.
+
+----------------------------------------------------------------
+
+Q: How to merge the new feature?
+
+Checkout to existing branch and RUN Command
+
+- git merge new_feature
+
+----------------------------------------------------------------
+
+REBASE (Re-Write Your commit history)
+
+- you can change commit message
+- you can delete commit message
+- you can record the commit message
+- you can combine the commit message
+- crazy stuff
+
+
+Q: How to change the most recent commit message?
+
+- git amend .......
+
+Q: How to change the commit message other than most recent?
