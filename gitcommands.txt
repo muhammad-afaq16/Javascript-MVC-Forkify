@@ -76,7 +76,7 @@ REBASE (Re-Write Your commit history)
 
 Q: How to change the most recent commit message?
 
-- git amend .......
+- git amend ....... only change recent commit
 
 Q: How to change the commit message other than most recent?
 
