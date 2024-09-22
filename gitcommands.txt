@@ -80,4 +80,5 @@ Q: How to change the most recent commit message?
 
 Q: How to change the commit message other than most recent?
 
+Below is example commit 3 will be modified.
 - git rebase -i HEAD~3
