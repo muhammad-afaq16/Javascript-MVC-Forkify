@@ -35,6 +35,10 @@ Use Commands of Git 2k24:
 
 - git log --oneline
 
+- git status
+
+- git log --oneline
+
 - git restore --staged path or filename
 
 
