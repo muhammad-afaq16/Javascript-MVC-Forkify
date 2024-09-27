@@ -39,7 +39,7 @@ Use Commands of Git 2k24:
 
 - git log --oneline
 
-- git restore --staged path or filename
+- git restore --staged Root_Path or filename
 
 
 ----------------------------------------------------------------
@@ -63,7 +63,7 @@ This approach is bit risky, creating a new branch and add new features there.
 
 Q: How to merge the new feature?
 
-Checkout to existing branch and RUN Command
+Checkout to main branch and RUN Command
 
 - git merge new_feature
 
@@ -95,11 +95,14 @@ Basically stashing is come to handy, when you have changes in
 B branch and you suddenly Remember you are at the wrong branch.
 YOU NEED your CURRENT changes in A branch instead of B.
 
-> - git stash Apply
-It will keep changes in stash and Apply to working directory
+> - git stash show
 
-> - git stash Pop
+
+It will keep changes in stash and Apply to working directory
+> - git stash Apply
+
 Will pop from stash and Apply to working directory
+> - git stash Pop
 
 --------------------------------------------------------------------------------
 
@@ -115,10 +118,14 @@ Q: What will you do, if you committed on wrong branch?
 
 - git cherry-pick commitID
 
------------------------------------------------------------------------------------
-##### Reflog
 
-If we deleted a useful commit then Reflog is saviour
+Note: you also need to delete from the main, by running
+> git reset --hard HEAD~1
+
+-----------------------------------------------------------------------------------
+### Reflog
+
+If we deleted a useful commit then Reflog is saviour.
 
 - git reflog 
 

@@ -15,7 +15,7 @@ export const controlRecipe = async function () {
   try {
     const id = window.location.hash.slice(1);
 
-    if (!id) return;
+    if (!id) {return;}
 
     //&  Loading Spinner
     recipeView.renderSpinner();
@@ -35,7 +35,7 @@ const controlSearchResults = async function () {
 
   try {
     const query = searchView.getQuery();
-    if (!query) return;
+    if (!query) {return;}
     await model.loadSearchResult(query);
     resultsView.render(model.state.search.results);
   } catch (error) {

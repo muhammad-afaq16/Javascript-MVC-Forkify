@@ -6,7 +6,7 @@ export class recipeView extends View {
   _parentEl = document.querySelector('.recipe');
   _data;
   _errorMessage = 'Error processing recipe. Please try again later.';
-  _message = "";
+  _message = '';
 
   _generateMarkup() {
     return `<figure class="recipe__fig">
