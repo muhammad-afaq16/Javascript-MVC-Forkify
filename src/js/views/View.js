@@ -4,6 +4,8 @@ export default class View {
   _data;
 
   render(data) {
+    if (!data || (Array.isArray(data) && data.length === 0))
+      return this.renderError();
     this._data = data;
     const markup = this._generateMarkup();
     this._clear();
@@ -30,7 +32,7 @@ export default class View {
     const markup = `<div class="error">
             <div>
               <svg>
-                <use href="src/img/icons.svg#icon-alert-triangle"></use>
+                <use href="${icons}#icon-alert-triangle"></use>
               </svg>
             </div>
             <p>${message}</p>
