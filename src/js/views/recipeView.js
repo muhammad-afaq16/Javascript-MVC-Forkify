@@ -2,7 +2,7 @@ import icons from '../../img/icons.svg';
 import { Fraction } from 'fractional';
 import View from './View';
 
-export class recipeView extends View {
+class recipeView extends View {
   _parentEl = document.querySelector('.recipe');
   _data;
   _errorMessage = 'Error processing recipe. Please try again later.';

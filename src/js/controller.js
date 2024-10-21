@@ -6,7 +6,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import searchView from './views/searchView';
 import resultsView from './views/resultsView';
-import { paginationView } from './views/PaginationView';
+import paginationView from './views/PaginationView';
 
 if (module.hot) {
   module.hot.accept();
@@ -35,24 +35,32 @@ export const controlRecipe = async function () {
 
 const controlSearchResults = async function () {
   const query = searchView.getQuery();
-  if (!query) return resultsView.renderError('Not Allowed Empty Query.');
+  if (!query) return;
   resultsView.renderSpinner();
 
   try {
     await model.loadSearchResult(query);
-    
-    resultsView.render(model.getSearchResultsPage(1));
 
-    paginationView.render(model.state.search)
+    resultsView.render(model.getSearchResultsPage());
 
+    paginationView.render(model.state.search);
   } catch (error) {
     console.log(error);
   }
 };
 
+const controlPagination = goToPage => {
+  console.log('Control Pagination');
+
+  resultsView.render(model.getSearchResultsPage(goToPage));
+
+  paginationView.render(model.state.search);
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipe);
   searchView.addHandlerSearch(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
 };
 
 init();
